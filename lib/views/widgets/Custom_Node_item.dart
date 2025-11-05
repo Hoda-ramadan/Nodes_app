@@ -1,0 +1,42 @@
+import 'package:flutter/material.dart';
+
+class CustomNodeItem extends StatelessWidget {
+  const CustomNodeItem({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.only(top: 16, bottom: 16, left: 16),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(16),
+        color: Colors.amber,
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          ListTile(
+            title: Text(
+              "Flutter tips",
+              style: TextStyle(fontSize: 25, color: Colors.black),
+            ),
+            subtitle: Text(
+              "build your container with hoda",
+              style: TextStyle(
+                fontSize: 18,
+                color: Colors.black.withOpacity(0.5),
+              ),
+            ),
+            trailing: IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.delete, size: 20, color: Colors.black),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(right: 10),
+            child: Text("4/11/2025", style: TextStyle(color: Colors.black)),
+          ),
+        ],
+      ),
+    );
+  }
+}
