@@ -12,14 +12,17 @@ class NodeListview extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemBuilder: (context, index) {
-        final color = data[index % data.length];
-        return Padding(
-          padding: const EdgeInsets.symmetric(vertical: 4),
-          child: CustomNodeItem(color: color),
-        );
-      },
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 10, top: 10),
+      child: ListView.builder(
+        itemBuilder: (context, index) {
+          final color = data[index % data.length];
+          return Padding(
+            padding: const EdgeInsets.symmetric(vertical: 4),
+            child: CustomNodeItem(color: color),
+          );
+        },
+      ),
     );
   }
 }
