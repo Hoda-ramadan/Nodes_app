@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nodes_app/views/widgets/Custom_Node_item.dart';
-import 'package:nodes_app/views/widgets/Custom_Note_listview.dart';
-import 'package:nodes_app/views/widgets/custom_appbar.dart';
+import 'package:nodes_app/views/Nodes_view_body.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -9,15 +7,13 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          children: [
-            Custom_appbar(),
-            Expanded(child: NodeListview()),
-          ],
-        ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: const Color.fromARGB(255, 146, 78, 100),
+
+        onPressed: () {},
+        child: Icon(Icons.add, color: Colors.black),
       ),
+      body: NodesViewBody(),
     );
   }
 }

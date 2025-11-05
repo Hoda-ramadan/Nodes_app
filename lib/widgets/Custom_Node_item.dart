@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
 class CustomNodeItem extends StatelessWidget {
-  const CustomNodeItem({super.key});
-
+  const CustomNodeItem({super.key, required this.color});
+  final Color color;
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(top: 16, bottom: 16, left: 16),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
-        color: Colors.amber,
+        color: color,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
