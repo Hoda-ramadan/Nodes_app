@@ -13,7 +13,7 @@ class NodesViewBody extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
-            Custom_appbar(),
+            Custom_appbar(icon: Icons.search, appbar_title: "Nodes"),
             Expanded(child: NodeListview()),
           ],
         ),
