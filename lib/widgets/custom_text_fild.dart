@@ -10,7 +10,11 @@ class CustomTextFild extends StatelessWidget {
       padding: const EdgeInsets.all(16),
       child: TextField(
         maxLines: maxline,
-        decoration: InputDecoration(border: buildBorder(), hint: Text(hint)),
+        decoration: InputDecoration(
+          border: buildBorder(),
+
+          hint: Text(hint, style: TextStyle(color: const Color(0xFF4B797F))),
+        ),
       ),
     );
   }

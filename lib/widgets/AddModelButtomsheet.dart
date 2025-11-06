@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nodes_app/widgets/CustomButtom.dart';
 import 'package:nodes_app/widgets/custom_text_fild.dart';
 
 class AddModelButtomSheet extends StatelessWidget {
@@ -8,13 +9,18 @@ class AddModelButtomSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
-      child: Column(
-        children: [
-          SizedBox(height: 32),
-          CustomTextFild(hint: 'Title'),
-          SizedBox(height: 16),
-          CustomTextFild(hint: "containt", maxline: 5),
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(height: 32),
+            CustomTextFild(hint: 'Title'),
+            SizedBox(height: 8),
+            CustomTextFild(hint: "containt", maxline: 5),
+            SizedBox(height: 20),
+            CustomButtom(),
+            SizedBox(height: 8),
+          ],
+        ),
       ),
     );
   }
